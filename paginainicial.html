@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="UTF-8">
+<meta name="author" content="Bryan Thyago Figueiredo">
+<meta name="theme-color" content="black">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="Design,Web,Desenvolvimento">
+<meta name="description" content="3DCampStudios oferece serviço de design 3D e serviços de webdesenvolvimento focado na criação de sites estáticos interativos e responsivos">
+<head>
+<title>
+3DCampStudios | Design 3D & Desenvolvimento Web
+</title>
+<style>
+body {background:linear-gradient(to bottom,#F3FDFF,#D7F7FF);margin:20px;padding:10px;font-family:Arial;
+animation: animation_name 2s
+}
+@-webkit-keyframes animation_name
+{
+from{opacity:0;}
+to{opacity:1;}
+}
+header {text-align:center;margin:20px;padding:10px;text-align:center;border:2px solid #00CCFF;border-radius:10px;}
+nav a {color:#00CCFF;}
+header strong {font-size:25px;color:#00CCFF;}
+header small {font-family:Monospace;font-size:18px;}
+header button {background:none;border:2px solid #00CCFF;margin:20px;border-radius:10px;font-weight:bold;height:20px;}
+header button:hover {box-shadow:0 0 5px lightgray;}
+section {text-align:center;margin:20px;padding:10px;}
+section:hover {margin:25px;transition:1.5s;}
+section b {font-size:20px;}
+section #b1 {color:#00CCFF;}
+section p {font-size:16px;}
+section ::first-letter {font-size:18px;font-weight:thin;}
+section button {width:200px;height:50px;border:none;background:linear-gradient(to right,#00CCFF,#008BF0);color:white;font-family:Monospace;margin:20px;padding:10px;border-radius:10px;}
+section button:hover {width:210px;height:60px;transition:1.5s;}
+nav {text-align:center;border:2px solid #00CCFF;border-radius:10px;margin:20px;padding:10px;}
+nav a {color:#00CCFF;}
+article {margin:20px;padding:10px;text-align:center;border:2px solid #00CCFF;border-radius:10px;}
+nav a {color:#00CCFF;}
+article:hover {margin:25px;transition:1.5s;}
+footer {text-align:center;margin:20px;padding:10px;}
+.dark  {background:linear-gradient(to right,black,#00002B);color:white;transition:1.5s;}
+::selection {background-color:yellow;color:black;}
+</style>
+</head>
+<body>
+<header>
+<strong>3DCampStudios</strong>
+<br>
+<small>Design 3D & Webdesenvolvimento</small>
+<br>
+<button onclick="tema()" name="Temas">☀️/🌙</button>
+<legend>Alternar Temas</legend>
+</header>
+<section>
+<b id="b1">DESIGN</b> <b>3D</b>
+<p>Seus projetos precisam de demonstração 3D? quer atrair um público maior? podemos lhe ajudar, oferecemos o serviço de design 3D para objetos, móveis e cenários para você ou sua empresa por um preço acessível, clique no botão abaixo e saiba mais.</p>
+<button onclick="design()">CONTRATAR</button>
+</section>
+<section>
+<b>DESENVOLVIMENTO</b> <b id="b1">WEB</b>
+<p>Irritado por seus planos não sairem do papel? cansado de vendas mal-sucedidas? relaxa, a 3DCampStudios também oferece o serviço de criação de sites personalizados e responsivos para você ou sua empresa, design limpo,organizado e o estilo que você deseja por um preço acessível, para mais informações clique abaixo. </p>
+<button onclick="webdev()">CONTRATAR</button>
+</section>
+<section>
+<b>WEB DESIGN</b> <b id="b1">3D</b>
+<p>Muitos problemas? com sites mal-feitos ou modelos 3D que dá até desanimo de olhar, a Inteligência Artificial não fez  sites do jeito que você queria? Nós da 3DCampStudios pensamos em você primeiro que deseja criar um site interativo para seus clientes, Mas não tem dinheiro,tempo ou ferramentas. Então decidimos fazer um junção de nossos serviços para sastifaze-lo por um preço justo. é só clicar abaixo e você será redirecionado ao atendimento</p>
+<button onclick="webdesign()">CONTRATAR</button>
+</section>
+<nav>
+<b>CONTATOS</b>
+<br>
+<a href="#">WhatsApp</a>
+<br>
+<a href="#">Mensagem (SMS)</a>
+<br>
+<a href="#">E-Mail</a>
+<br>
+<b>REDES SOCIAIS</b>
+<br>
+<a href="#">Instagram</a>
+<br>
+<a href="#">YouTube</a>
+<br>
+<a href="#">Canal do WhatsApp</a>
+</nav>
+<article>
+<p>Obrigado por ser um usuário de nossos serviços, somos gratos por ter escolhido um de nossos serviços, para sugestões,dúvidas ou reclamações utilize nossos contatos, para uma pré-avaliação de nossos serviços, confira nossas redes sociais.</p>
+<p>Períodos de atendimento</p>
+<p>Seg-Sex: 15:00-19:00</p>
+<p>Sáb-Dom: 7:30-17:00</p>
+</article>
+<footer>
+<p>&copy;3DCampStudios 2026</p>
+</footer>
+</body>
+<script async>
+function tema()
+{
+document.body.classList.toggle('dark');
+}
+function design()
+{ window.open('mailto:bryanthyago99@gmail.com?subject=Olá, me chamo $NAME e gostaria de contratar o serviço de design 3D');
+}
+function webdev()
+{ window.open('webdev.html');
+}
+function webdesign()
+{window.open('webdesign.html');
+}
+const hoje = new Date()
+var dia = hoje.getDate();
+var mes = hoje.getMonth()+1;
+var ano = hoje.getFullYear();
+var hora = hoje.getHours();
+var minuto = hoje.getMinutes();
+console.log('site acessado em '+dia+'/'+mes+'/'+ano+' '+'ás'+' '+'('+hora+':'+minuto+')')
+if (hora>19)
+{ tema()
+}
+if (hora>23)
+{ alert('Boa noite, tá na hora de dormir!');
+}
+</script>
+</html>
