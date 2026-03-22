@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bryan Thyago | Freelancer</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav h2 {
+    font-weight: 300;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: radial-gradient(circle, #111, #000);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    animation: fadeUp 1.5s ease;
+}
+
+.hero span {
+    color: #aaa;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* SEÇÕES */
+section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.4s;
+    border: 1px solid #222;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #ffffff22;
+}
+
+/* PORTFÓLIO */
+.portfolio-item {
+    height: 200px;
+    background: #111;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    background: #222;
+}
+
+/* CONTATO */
+.contact a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #111;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+#edit {color:white;font-size:18px;}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <h2>Sobre mim</h2>
+    <div>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Áreas de<span> Atuação</span></h1>
+    <p>Web Developer • Video Editor • 3D Designer</p>
+    <a href="#contato" class="btn">Contratar</a>
+</section>
+
+<section id="sobre" class="reveal">
+    <h2>Sobre Mim</h2>
+    <p>Sou freelancer especializado em desenvolvimento web, edição de vídeo e design 3D. Crio experiências digitais modernas, responsivas e profissionais.</p>
+    <p>Idiomas: Inglês (Intermediário) | Espanhol (Intermediário) | Português-BR (Nativo)</p>
+</section>
+
+<section id="servicos" class="reveal">
+    <h2>Serviços</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Desenvolvimento Web</h3>
+            <p>Sites modernos com HTML, CSS e JavaScript.</p>
+        </div>
+        <div class="card">
+            <h3>Edição de Vídeo</h3>
+            <p>Edição profissional com CapCut para redes sociais.</p>
+        </div>
+        <div class="card">
+            <h3>Design 3D</h3>
+            <p>Modelagem e animação com Prisma 3D.</p>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio" class="reveal">
+    <h2>Portfólio</h2>
+    <div class="grid">
+        <div class="portfolio-item"><a href="https://youtube.com/shorts/QIkqXyhfzX0?si=CSOJztj4AYGMUIAK" id="edit">Portfólio em vídeo</a>
+    </div>
+</section>
+
+<section id="contato" class="reveal contact">
+    <h2>Contato</h2>
+    <p>Disponível para trabalhos freelancer</p>
+    <a href="https://youtube.com/@bryanoeditor?si=N1sxNOkNwV8ePT2Q">YouTube: @Bryan,O Editor de vídeos</a>
+</section>
+
+<footer>
+    <p>© 2026 Bryan Thyago</p>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if(top < windowHeight - 100){
+            el.classList.add('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
